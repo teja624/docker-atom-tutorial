@@ -19,7 +19,7 @@ Atom: https://atom.io
 ### Atom + platformio-ide-terminal package
 The most important Atom package to install is platformio-ide-terminal. It'll give you a terminal in your editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
 
 ## In-window Terminal
 After you've installed the platformio-ide-terminal package, you'll now have a '+' button at the bottom-left corner of your screen. Click on it to open a terminal window.
@@ -28,7 +28,7 @@ The magic starts with a very simple shortcut. Command+Enter on the Mac. I'll sen
 
 It's simple, but magical in time-savings. Look at the magic in this screenshot. All commands were run from the text editor into the terminal by pressing Command+Enter three times.
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
 
 Let's try running some Docker commands from out text editor by pressing Command+Enter. I'll leave you with one more screenshot, before moving to simply posting the commands here. You can do the copy/pasting.
 
