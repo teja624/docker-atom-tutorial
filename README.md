@@ -26,7 +26,7 @@ After you've installed the platformio-ide-terminal package, you'll now have a '+
 
 The magic starts with a very simple shortcut. Command+Enter on the Mac. I'll send the current line (or selection) from the text editor and run it in the terminal. This is great for scriptingless scriting.
 
-It's simple, but magical in time-savings. Look at the magic in this screenshot. All commands were run from the text editor into the terminal by pressing Command+Enter three times.
+It's simple, but fucking magical. It can save you so much time. Look at this screenshot. All commands were run from the text editor into the terminal by pressing Command+Enter three times.
 
 ![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
 
