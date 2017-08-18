@@ -46,23 +46,40 @@ The following will print your Docker Version, the Images available (might not ha
 docker --version
 # Print Docker Images (To be used to create Containers)
 docker images
-# Print Containers
+# Print Docker Containers
 docker ps -a
+# List Docker Networks
+docker network ls
 ```
 ### Downloading your first Docker instance
-There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github.
+There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github, there's loads on Github.
 
 To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image might have for following components:
 
-- OS
-- Application (NGINX, MySQL, any many others)
+- OS (The whole point of Docker is that it can work without installing an OS, but on the Mac it does download the OS)
+- Application (NGINX, MySQL, any many, many, many others)
 - Additional OS or App Config.
 
-Sound to good to be true right?
-Let's pick an application to test it. NGINX.
+A complete environment? Yes. Sounds to good to be true right? It does. Let's pick an application and test it out: Nginx.
 
-Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server).
+Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). It's a great choice because it's a web server that immediately gives us a Web front-end to go to verify it all installed correctly.
 
 To install NGINX on Debian, and get it ready for use, we could type the following command:
 
-"[TO BE COMPLETED]"
+```shell
+docker run -itd \
+    --restart always \
+    --name my-nginx \
+    --hostname splunk_hf_ds \
+    --volume "/tmp/:/tmp/" \
+    -p 8080:80 \
+  nginx:latest
+```
+
+Now go to http://localhost:8080 and you should see the Nginx Welcome screen. 
+Yeah, that just happened.
+
+### Accessing your instance
+How can we get onto our Docker instance shell?
+
+[TO BE CONTINUED]
