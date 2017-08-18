@@ -77,9 +77,99 @@ docker run -itd \
 ```
 
 Now go to http://localhost:8080 and you should see the Nginx Welcome screen. 
+
 Yeah, that just happened.
 
-### Accessing your instance
-How can we get onto our Docker instance shell?
+### What do all those 'docker-run' modifiers mean?
+Here's the full reference https://docs.docker.com/engine/reference/run/
 
-[TO BE CONTINUED]
+In short:
+
+- '-i':    Keep STDIN open even if not attached
+- '-t':    Allocate a pseudo-tty
+- '-d':    Detached mode. Run the container in the background.
+
+- '--restart':  Restart policy of always so that if the container exits, Docker will restart it.
+- '--name':     Name of Docker container to be used to stop, start, remove the container. Name it as will.
+- '--hostname': Hostname within Docker. Accessible from other Docker instances if within a Custom Docker Network.
+- '--volume':   Maps Host volumes to Docker volumes so they are one and the same. <local>:<container>
+- '-p':         Maps Host ports to Docker ports so they are one and the same. <local>:<container>
+
+- 'nginx:latest': Download the nginx image, referencing the 'latest' version.
+
+### Accessing your Instances
+How can we get onto our Docker instance's shell? Easy:
+
+```shell
+docker exec -it my-nginx bash
+```
+
+You can even run commands without getting into the shell. This will push the 'rm' command into the nginx instance. 
+
+```shell
+docker exec -d my-nginx /bin/sh -c 'rm -rf /tmp/*'
+```
+
+### Managing your Instances
+The following commands are a staple. You can probably guess what they do:
+
+```shell
+# Start, Stop and Remove your Instances
+docker start my-nginx
+docker stop my-nginx
+docker rm my-nginx
+docker rm --force my-nginx
+
+# List your instances and Remove them if needed
+docker images
+docker rmi nginx
+```
+
+### Docker Networking
+No issues, you can create as many networks as you like in Docker, and connect Containers to those networks.
+
+The following is an example of two docker containers connected to a User Defined Network. UDF's are useful in many ways. One useful tip is that UDF's configure a DNS and update the /hosts file of all containers so every container in the network can access any other using the hostname configured when creating the container.
+
+```shell
+# Create a User-Defined bridge network (needed for DNS hostname discovery)
+docker network create \
+  --driver=bridge \
+  --subnet=172.28.0.0/16 \
+  --ip-range=172.28.5.0/24 \
+  --gateway=172.28.5.254 \
+  jupyter-splunk
+
+# Create a docker container running an unauthenticated Jupyter instance.
+docker run -itd \
+  --restart always \
+  --name jupyter \
+  --hostname jupyter \
+  --network=jupyter-splunk \
+  -p 8888:8888 \
+  -v "/tmp/:/home/jovyan/" \
+  jupyter/datascience-notebook:latest \
+  start-notebook.sh --NotebookApp.token=''
+
+# Create a docker container running the latest Splunk version.
+docker run -itd \
+  --restart always \
+  --name splunk \
+  --hostname splunk \
+  --network=jupyter-splunk \
+  -p 8000:8000 \
+  -e "SPLUNK_START_ARGS=--accept-license" \
+  -e "SPLUNK_USER=root" \
+  splunk/splunk:latest
+```
+
+You can now connect to either instance and ping the other using its hostname.
+
+### Manage Docker Networks
+Needed commands. Also easy to guess what they do:
+
+```shell
+# List all Docker Networks
+docker network ls
+# Remove Network
+docker network rm jupyter-splunk
+```
