@@ -11,7 +11,7 @@ Docker is the world’s leading software container platform. Download a containe
 There's a package in Docker for pretty much everything, including an in-window terminal. This is beyond useful when creating Docker containers.
 
 ## Show me.
-Ok, no need to get aggresive. I'll need something from you first ... Go to these two links and download + install both Docker and Atom:
+Alright, take it easy. I'll need something from you first ... Go to these two links and download + install both Docker and Atom:
 
 Docker: https://docs.docker.com/engine/installation/
 Atom: https://atom.io
@@ -32,12 +32,15 @@ It's simple, but magical in time-savings. Look at the magic in this screenshot. 
 
 Let's try running some Docker commands from out text editor by pressing Command+Enter. I'll leave you with one more screenshot, before moving to simply posting the commands here. You can do the copy/pasting.
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/docker.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/dockercom.png)
 
 ## Docker Commands
 There are many Docker commands available, so I'm going to focus only on the minimum to get you going on simple environments. If you want all the commands available, go here: https://docs.docker.com/engine/reference/commandline/docker/#child-commands
 
 ### Environment Info
+Let's start with a few easy commands. 
+The following will print your Docker Version, the Images available (might not have any yet), and the Containers running (might not have any yet).
+
 ```shell
 # Print Docker Version
 docker --version
@@ -46,5 +49,20 @@ docker images
 # Print Containers
 docker ps -a
 ```
+### Downloading your first Docker instance
+There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github.
 
+To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image might have for following components:
 
+- OS
+- Application (NGINX, MySQL, any many others)
+- Additional OS or App Config.
+
+Sound to good to be true right?
+Let's pick an application to test it. NGINX.
+
+Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server).
+
+To install NGINX on Debian, and get it ready for use, we could type the following command:
+
+"[TO BE COMPLETED]"
