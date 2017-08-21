@@ -90,8 +90,8 @@ In short:
 - '-d':    Detached mode. Run the container in the background.
 
 - '--restart':  Restart policy of always so that if the container exits, Docker will restart it.
-- '--name':     Name of Docker container to be used to stop, start, remove the container. Name it as will.
-- '--hostname': Hostname within Docker. Accessible from other Docker instances if within a Custom Docker Network.
+- '--name':     Name of Docker container to be used to stop, start, remove the container. Name it at will.
+- '--hostname': Hostname for the docker instance. Accessible from other Docker instances by its hostname if within a Custom Docker Network.
 - '--volume':   Maps Host volumes to Docker volumes so they are one and the same. <local>:<container>
 - '-p':         Maps Host ports to Docker ports so they are one and the same. <local>:<container>
 
