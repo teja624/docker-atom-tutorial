@@ -183,7 +183,7 @@ The steps are really simple:
 - Create a file named 'Dockerfile' in some directory and fill that Dockerfile with Dockerfile commands.
 - From your terminal, move into the directory where the Dockerfile file sits.
 - Run the following command to build your Dockerfile: ```docker build -t <choose_name_for_image> --force-rm=true .```
-- The above command will look for a file called 'Dockerfile' in the current directory
+- The above command will look for a file called 'Dockerfile' in the current directory and build it into a Docker image.
 - Check that the image was create successfully: ```docker images```
 - Start an instance of your image: ```docker run -itd <other parameters> <your image name>```
 
