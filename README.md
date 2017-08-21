@@ -10,7 +10,7 @@ Atom is one of the best text editors out there. It's cross-platform, modern, app
 Docker is the world’s leading software container platform. Download a container with your favourite software preinstalled and start coding in seconds.
 
 ### Why Atom and Docker?
-There's a package in Docker for pretty much everything, including an in-window terminal. This is beyond useful when creating Docker containers.
+There's a package in Atom for pretty much everything, including an in-window terminal. This is beyond useful when creating Docker containers.
 
 ## Show me.
 Sure. I'll need something from you first though... Go to these two links and download + install both Docker and Atom:
