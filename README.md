@@ -1,5 +1,7 @@
 # Docker-Atom Tutorial
-How to use Atom and Docker for Containerised fun.
+A simple tutorial to get started with Docker and Atom.
+
+Although Docker is really easy to undeerstand, there are not many didactic resources out there, so I wanted to create something to get everyone started quickly.
 
 ### Why Atom?
 Atom is one of the best text editors out there. It's cross-platform, modern, approachable, yet hackable. Also, Atom comes with a very large number of packages to customise your editor exactly as you want it, all installable from the GUI.
@@ -11,7 +13,7 @@ Docker is the world’s leading software container platform. Download a containe
 There's a package in Docker for pretty much everything, including an in-window terminal. This is beyond useful when creating Docker containers.
 
 ## Show me.
-Alright, take it easy. I'll need something from you first ... Go to these two links and download + install both Docker and Atom:
+Sure. I'll need something from you first though... Go to these two links and download + install both Docker and Atom:
 
 Docker: https://docs.docker.com/engine/installation/
 Atom: https://atom.io
@@ -78,7 +80,7 @@ docker run -itd \
 
 Now go to http://localhost:8080 and you should see the Nginx Welcome screen. 
 
-Yeah, that just happened.
+Yeah, that just happened. Just like there's a Docker container for Nginx, we have one for MySQL, Mongo, Jenkins, Splunk, Hadoop, and anything else you can think of.
 
 ### What do all those 'docker-run' modifiers mean?
 Here's the full reference https://docs.docker.com/engine/reference/run/
@@ -95,7 +97,7 @@ In short:
 - '--volume':   Maps Host volumes to Docker volumes so they are one and the same. <local>:<container>
 - '-p':         Maps Host ports to Docker ports so they are one and the same. <local>:<container>
 
-- 'nginx:latest': Download the nginx image, referencing the 'latest' version.
+- 'nginx:latest': Use the nginx image, referencing the 'latest' version. If the image is not local, it'll get downloaded.
 
 ### Accessing your Instances
 How can we get onto our Docker instance's shell? Easy:
@@ -173,6 +175,30 @@ docker network ls
 # Remove Network
 docker network rm jupyter-splunk
 ```
+
+### Create your own Docker images
+So far we have been downloading images that others have built, but we can also create our own.
+
+Docker does this by building a Dockerfile, which contains the instructions on how to run an image. That's it. The image is then available for you to use the 'docker run' command as above
+
+The steps are really simple:
+- Create a file named 'Dockerfile' in some directory and fill that Dockerfile with Dockerfile commands.
+- From your terminal, cd into the directory where the file sits.
+- Run the following command to build your Dockerfile: ```shell docker build -t ubuntu_dan --force-rm=true .```
+- Check that the images was create successfully: ```shell docker images```
+- Start an instance of your image: ```shell docker run -itd <other parameters> <your image name>```
+
+That's it.
+
+Have a look at existing Dockerfiles in Github to give you an idea of how they look like:
+
+- MySQL: https://github.com/docker-library/mysql/blob/master/8.0/Dockerfile
+- Jenkins: https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile
+- Mongo: https://github.com/docker-library/mongo/blob/00a8519463e776e797c227681a595986d8f9dbe1/3.0/Dockerfile
+
+And become an expert by reading the Dockerfile docs:
+
+- https://docs.docker.com/engine/reference/builder/
 
 ## About Me
 https://www.linkedin.com/in/danielmartinezformoso/
