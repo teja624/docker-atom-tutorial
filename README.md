@@ -62,7 +62,7 @@ To download and run your docker instance, you'll need to run a 'docker run' comm
 
 A complete environment? Yes. Sounds to good to be true right? Let's pick an application and test it out: Nginx.
 
-Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). It's a great choice because it's a web server that immediately gives us a Web front-end to go to verify it all installed correctly.
+Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). It's a great choice because it's a web server that immediately gives us a Web front-end to go and verify it all installed correctly.
 
 To install NGINX on Debian, and get it ready for use, we could type the following command:
 
