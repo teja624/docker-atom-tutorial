@@ -184,9 +184,9 @@ Docker does this by building a Dockerfile, which contains the instructions on ho
 The steps are really simple:
 - Create a file named 'Dockerfile' in some directory and fill that Dockerfile with Dockerfile commands.
 - From your terminal, cd into the directory where the Dockerfile file sits.
-- Run the following command to build your Dockerfile: ```shell docker build -t <choose_name_for_image> --force-rm=true .```
-- Check that the images was create successfully: ```shell docker images```
-- Start an instance of your image: ```shell docker run -itd <other parameters> <your image name>```
+- Run the following command to build your Dockerfile: ```docker build -t <choose_name_for_image> --force-rm=true .```
+- Check that the images was create successfully: ```docker images```
+- Start an instance of your image: ```docker run -itd <other parameters> <your image name>```
 
 That's it.
 
