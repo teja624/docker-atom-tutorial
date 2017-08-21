@@ -126,7 +126,7 @@ docker rmi nginx
 ```
 
 ### Docker Networking
-No issues, you can create as many networks as you like in Docker, and connect Containers to those networks.
+You can create as many networks as you like in Docker, and connect Containers to those networks.
 
 The following is an example of two docker containers connected to a User Defined Network. UDF's are useful in many ways. One useful tip is that UDF's configure a DNS and update the /hosts file of all containers so every container in the network can access any other using the hostname configured when creating the container.
 
@@ -162,7 +162,7 @@ docker run -itd \
   splunk/splunk:latest
 ```
 
-You can now connect to either instance and ping the other using its hostname.
+You can now connect to either instance's shell and ping the other using its hostname.
 
 ### Manage Docker Networks
 Needed commands. Also easy to guess what they do:
@@ -177,18 +177,17 @@ docker network rm jupyter-splunk
 ### Create your own Docker images
 So far we have been downloading images that others have built, but we can also create our own.
 
-Docker does this by building a Dockerfile, which contains the instructions on how to run an image. The image is then available for you to use the 'docker run' command as explained previously.
+Docker does this by making use of, and building a, Dockerfile. The Dockerfile contains instructions on how to build an image. The image is then available for you to use the 'docker run' command as explained previously.
 
 The steps are really simple:
 - Create a file named 'Dockerfile' in some directory and fill that Dockerfile with Dockerfile commands.
-- From your terminal, cd into the directory where the Dockerfile file sits.
+- From your terminal, move into the directory where the Dockerfile file sits.
 - Run the following command to build your Dockerfile: ```docker build -t <choose_name_for_image> --force-rm=true .```
-- Check that the images was create successfully: ```docker images```
+- The above command will look for a file called 'Dockerfile' in the current directory
+- Check that the image was create successfully: ```docker images```
 - Start an instance of your image: ```docker run -itd <other parameters> <your image name>```
 
-That's it.
-
-Have a look at existing Dockerfile(s) in Github to give you an idea of how they look like:
+Have a look at existing Dockerfile(s) in Github to give you an idea of what they look like:
 
 - MySQL: https://github.com/docker-library/mysql/blob/master/8.0/Dockerfile
 - Jenkins: https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile
