@@ -1,7 +1,7 @@
 # Docker-Atom Tutorial
 A simple tutorial to get started with Docker and Atom.
 
-Although Docker is really easy to undeerstand, there are not many didactic resources out there, so I wanted to create something to get everyone started quickly.
+Although Docker is really easy to understand, there are not many didactic resources out there, so I wanted to create something to get everyone started quickly.
 
 ### Why Atom?
 Atom is one of the best text editors out there. It's cross-platform, modern, approachable, yet hackable. Also, Atom comes with a very large number of packages to customise your editor exactly as you want it, all installable from the GUI.
