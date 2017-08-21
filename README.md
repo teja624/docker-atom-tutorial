@@ -179,18 +179,18 @@ docker network rm jupyter-splunk
 ### Create your own Docker images
 So far we have been downloading images that others have built, but we can also create our own.
 
-Docker does this by building a Dockerfile, which contains the instructions on how to run an image. That's it. The image is then available for you to use the 'docker run' command as above
+Docker does this by building a Dockerfile, which contains the instructions on how to run an image. The image is then available for you to use the 'docker run' command as explained previously.
 
 The steps are really simple:
 - Create a file named 'Dockerfile' in some directory and fill that Dockerfile with Dockerfile commands.
-- From your terminal, cd into the directory where the file sits.
-- Run the following command to build your Dockerfile: ```shell docker build -t ubuntu_dan --force-rm=true .```
+- From your terminal, cd into the directory where the Dockerfile file sits.
+- Run the following command to build your Dockerfile: ```shell docker build -t <choose_name_for_image> --force-rm=true .```
 - Check that the images was create successfully: ```shell docker images```
 - Start an instance of your image: ```shell docker run -itd <other parameters> <your image name>```
 
 That's it.
 
-Have a look at existing Dockerfiles in Github to give you an idea of how they look like:
+Have a look at existing Dockerfile(s) in Github to give you an idea of how they look like:
 
 - MySQL: https://github.com/docker-library/mysql/blob/master/8.0/Dockerfile
 - Jenkins: https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile
