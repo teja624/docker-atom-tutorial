@@ -54,9 +54,13 @@ docker network ls
 ### Downloading your first Docker instance
 There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github, there's loads on Github.
 
-To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image might have for following components:
+When installing on the Mac, Docker for Mac uses HyperKit, a lightweight macOS virtualization solution built on the Hypervisor.framework.
 
-- OS (The whole point of Docker is that it can work without installing an OS, but on the Mac it does download the OS)
+When installing on Windows, Docker for Windows uses Hyper-V.
+
+To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image will have the following components:
+
+- Base Image (an OS user space minus the kernel)
 - Application (NGINX, MySQL, any many, many, many others)
 - Additional OS or App Config.
 
