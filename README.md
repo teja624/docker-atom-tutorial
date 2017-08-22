@@ -19,7 +19,7 @@ Docker: https://docs.docker.com/engine/installation/
 Atom: https://atom.io
 
 ### Atom + platformio-ide-terminal package
-The most important Atom package to install is platformio-ide-terminal. It'll give you a terminal in your editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
+The most important Atom package to install for this tutorial is platformio-ide-terminal. It'll give you a terminal embedded in your text editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
 
 ![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
 
@@ -34,11 +34,24 @@ Let's try running some Docker commands from out text editor by pressing Control+
 
 ![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/dockercom.png)
 
+## What is a Container?
+Containers are a way to package software in a format that can run isolated on a shared operating system. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. This makes for efficient, lightweight, self-contained systems and guarantees that software will always run the same, regardless of where it’s deployed.
+
+### Containers vs VM's
+
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/containers_vs_vms.png)
+
+### Containers and VM's
+
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/containers_and_vms.png)
+
+The explanation I've included here is the TL;DR version of Github's Doc page. If you need more detail, navigate to: https://www.docker.com/what-container
+
 ## Docker Commands
 There are many Docker commands available, so I'm going to focus only on the minimum to get you going on simple environments. If you want all the commands available, go here: https://docs.docker.com/engine/reference/commandline/docker/#child-commands
 
 ### Environment Info
-Let's start with a few easy commands. 
+Let's start with a few easy commands.
 The following will print your Docker Version, the Images available (might not have any yet), and the Containers running (might not have any yet).
 
 ```shell
@@ -80,7 +93,7 @@ docker run -itd \
   nginx:latest
 ```
 
-Now go to http://localhost:8080 and you should see the Nginx Welcome screen. 
+Now go to http://localhost:8080 and you should see the Nginx Welcome screen.
 
 Yeah, that just happened. Just like there's a Docker container for Nginx, we have one for MySQL, Mongo, Jenkins, Splunk, Hadoop, and anything else you can think of.
 
@@ -108,13 +121,13 @@ How can we get onto our Docker instance's shell? Easy:
 docker exec -it my-nginx bash
 ```
 
-You can even run commands without getting into the shell. This will push the 'rm' command into the nginx instance. 
+You can even run commands without getting into the shell. This will push the 'rm' command into the nginx instance.
 
 ```shell
 docker exec -d my-nginx /bin/sh -c 'rm -rf /tmp/*'
 ```
 
-And you have the added benefit of getting to pick the user under which the command is to be run. 
+And you have the added benefit of getting to pick the user under which the command is to be run.
 
 ```shell
 docker exec --user root -d my-nginx /bin/sh -c 'rm -rf /tmp/*'
