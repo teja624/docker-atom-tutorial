@@ -47,6 +47,15 @@ Containers are a way to package software in a format that can run isolated on a 
 
 The explanation I've included here is the TL;DR version of Github's Doc page. If you need more detail, navigate to: https://www.docker.com/what-container
 
+### Containers in Linux, Mac and Windows
+Linux is Docker's favourite home, and Ubuntu is the preferred distro.
+
+When installing on the Mac, Docker for Mac uses HyperKit, a lightweight macOS virtualization solution built on the Hypervisor.framework.
+
+When installing on Windows, Docker for Windows uses Hyper-V.
+
+In both Mac and Windows environment, Docker automatically creates and manages one virtual machine running Ubuntu, and all Docker containers run on that VM. This is transparent to the user, as there's no need to manage the VM.
+
 ## Docker Commands
 There are many Docker commands available, so I'm going to focus only on the minimum to get you going on simple environments. If you want all the commands available, go here: https://docs.docker.com/engine/reference/commandline/docker/#child-commands
 
@@ -66,10 +75,6 @@ docker network ls
 ```
 ### Downloading your first Docker instance
 There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github, there's loads on Github.
-
-When installing on the Mac, Docker for Mac uses HyperKit, a lightweight macOS virtualization solution built on the Hypervisor.framework.
-
-When installing on Windows, Docker for Windows uses Hyper-V.
 
 To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image will have the following components:
 
