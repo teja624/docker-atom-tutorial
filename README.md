@@ -114,6 +114,12 @@ You can even run commands without getting into the shell. This will push the 'rm
 docker exec -d my-nginx /bin/sh -c 'rm -rf /tmp/*'
 ```
 
+And you have the added benefit of getting to pick the user under which the command is to be run. 
+
+```shell
+docker exec --user root -d my-nginx /bin/sh -c 'rm -rf /tmp/*'
+```
+
 ### Managing your Instances
 The following commands are a staple. You can probably guess what they do:
 
