@@ -92,7 +92,7 @@ To install NGINX on Debian, and get it ready for use, we could type the followin
 docker run -itd \
     --restart always \
     --name my-nginx \
-    --hostname splunk_hf_ds \
+    --hostname my-nginx \
     --volume "/tmp/:/tmp/" \
     -p 8080:80 \
   nginx:latest
