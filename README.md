@@ -18,22 +18,6 @@ Sure. I'll need something from you first though... Go to these two links and dow
 Docker: https://docs.docker.com/engine/installation/
 Atom: https://atom.io
 
-### Atom + platformio-ide-terminal package
-The most important Atom package to install for this tutorial is platformio-ide-terminal. It'll give you a terminal embedded in your text editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
-
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
-
-## In-window Terminal
-After you've installed the platformio-ide-terminal package, you'll now have a '+' button at the bottom-left corner of your screen. Click on it to open a terminal window.
-
-The magic starts with a simple shortcut: Control+Enter on the Mac. It'll send the current line (or selection) from the text editor and run it in the terminal. This is great for scriptingless scriting, as it can save you a lot of time. Look at this screenshot. All commands were run from the text editor into the terminal by pressing Control+Enter three times.
-
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
-
-Let's try running some Docker commands from out text editor by pressing Control+Enter. I'll leave you with one more screenshot, before moving to simply posting the commands here. You can do the copy/pasting.
-
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/dockercom.png)
-
 ## What is a Container?
 Containers are a way to package software in a format that can run isolated on a shared operating system. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. This makes for efficient, lightweight, self-contained systems and guarantees that software will always run the same, regardless of where it’s deployed.
 
@@ -224,6 +208,24 @@ Have a look at existing Dockerfile(s) in Github to give you an idea of what they
 And become an expert by reading the Dockerfile docs:
 
 - https://docs.docker.com/engine/reference/builder/
+
+
+### Atom + platformio-ide-terminal package
+The most important Atom package to install for this tutorial is platformio-ide-terminal. It'll give you a terminal embedded in your text editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
+
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
+
+## In-window Terminal
+After you've installed the platformio-ide-terminal package, you'll now have a '+' button at the bottom-left corner of your screen. Click on it to open a terminal window.
+
+The magic starts with a simple shortcut: Control+Enter on the Mac. It'll send the current line (or selection) from the text editor and run it in the terminal. This is great for scriptingless scriting, as it can save you a lot of time. Look at this screenshot. All commands were run from the text editor into the terminal by pressing Control+Enter three times.
+
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
+
+Let's try running some Docker commands from out text editor by pressing Control+Enter. I'll leave you with one more screenshot, before moving to simply posting the commands here. You can do the copy/pasting.
+
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/dockercom.png)
+
 
 ## About Me
 https://www.linkedin.com/in/danielmartinezformoso/
