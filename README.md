@@ -23,11 +23,11 @@ Containers are a way to package software in a format that can run isolated on a 
 
 ### Containers vs VM's
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/containers_vs_vms.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/images/containers_vs_vms.png)
 
 ### Containers and VM's
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/containers_and_vms.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/images/containers_and_vms.png)
 
 The explanation I've included here is the TL;DR version of Github's Doc page. If you need more detail, navigate to: https://www.docker.com/what-container
 
@@ -213,18 +213,18 @@ And become an expert by reading the Dockerfile docs:
 ### Atom + platformio-ide-terminal package
 The most important Atom package to install for this tutorial is platformio-ide-terminal. It'll give you a terminal embedded in your text editor. Install it first by going to Atom's Preferences, select Install +, and search for 'platformio'. Here's a screenshot:
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/platformio.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/images/platformio.png)
 
 ## In-window Terminal
 After you've installed the platformio-ide-terminal package, you'll now have a '+' button at the bottom-left corner of your screen. Click on it to open a terminal window.
 
 The magic starts with a simple shortcut: Control+Enter on the Mac. It'll send the current line (or selection) from the text editor and run it in the terminal. This is great for scriptingless scriting, as it can save you a lot of time. Look at this screenshot. All commands were run from the text editor into the terminal by pressing Control+Enter three times.
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/atom.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/images/atom.png)
 
 Let's try running some Docker commands from out text editor by pressing Control+Enter. I'll leave you with one more screenshot, before moving to simply posting the commands here. You can do the copy/pasting.
 
-![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/dockercom.png)
+![alt text](https://github.com/dformoso/docker-atom-tutorial/blob/master/images/dockercom.png)
 
 
 ## About Me
