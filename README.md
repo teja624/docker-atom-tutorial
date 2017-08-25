@@ -132,7 +132,7 @@ docker stop my-nginx
 docker rm my-nginx
 docker rm --force my-nginx
 
-# List your instances and Remove them if needed
+# List your images and Remove them if needed
 docker images
 docker rmi nginx
 ```
