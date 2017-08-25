@@ -58,7 +58,7 @@ docker ps -a
 docker network ls
 ```
 ### Downloading your first Docker instance
-There are hundreds of Docker instances ready to be downloaded with thousands of built in apps. A great place to look for available images is Docker Hub https://hub.docker.com, and also here in Github, there's loads on Github.
+There are hundreds of Docker images ready to be downloaded. A great place to look for available images is Docker Hub https://hub.docker.com, as well as right here in Github.
 
 To download and run your docker instance, you'll need to run a 'docker run' command. When you run the command, Docker will go and download the image for you. The image will have the following components:
 
