@@ -32,7 +32,7 @@ Containers are a way to package software in a format that can run isolated on a 
 The explanation I've included here is the TL;DR version of Github's Doc page. If you need more detail, navigate to: https://www.docker.com/what-container
 
 ### Containers in Linux, Mac and Windows
-Linux is Docker's favourite home, and Ubuntu is the preferred distro.
+Docker has been designed to run on Linux, with Ubuntu as the preferred Linux distro.
 
 When installing on the Mac, Docker for Mac uses HyperKit, a lightweight macOS virtualization solution built on the Hypervisor.framework.
 
