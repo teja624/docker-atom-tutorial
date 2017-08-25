@@ -201,6 +201,7 @@ The steps are really simple:
 
 Have a look at existing Dockerfile(s) in Github to give you an idea of what they look like:
 
+- Splunk: https://github.com/splunk/docker-splunk/blob/master/enterprise/Dockerfile 
 - MySQL: https://github.com/docker-library/mysql/blob/master/8.0/Dockerfile
 - Jenkins: https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile
 - Mongo: https://github.com/docker-library/mongo/blob/00a8519463e776e797c227681a595986d8f9dbe1/3.0/Dockerfile
