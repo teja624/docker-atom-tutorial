@@ -151,17 +151,6 @@ docker network create \
   --gateway=172.28.5.254 \
   jupyter-splunk
 
-# Create a docker container running an unauthenticated Jupyter instance.
-docker run -itd \
-  --restart always \
-  --name jupyter \
-  --hostname jupyter \
-  --network=jupyter-splunk \
-  -p 8888:8888 \
-  -v "/tmp/:/home/jovyan/" \
-  jupyter/tensorflow-notebook:latest \
-  start-notebook.sh --NotebookApp.token=''
-
 # Create a docker container running the latest Splunk version.
 docker run -itd \
   --restart always \
@@ -172,6 +161,17 @@ docker run -itd \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_USER=root" \
   splunk/splunk:latest
+  
+# Create a docker container running an unauthenticated Jupyter instance.
+docker run -itd \
+  --restart always \
+  --name jupyter \
+  --hostname jupyter \
+  --network=jupyter-splunk \
+  -p 8888:8888 \
+  -v "/tmp/:/home/jovyan/" \
+  jupyter/tensorflow-notebook:latest \
+  start-notebook.sh --NotebookApp.token=''
 ```
 
 You can now connect to either instance's shell and ping the other using its hostname.
